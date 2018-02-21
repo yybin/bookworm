@@ -11,7 +11,7 @@ class LoginPage extends React.Component {
         }).isRequired,
         login: PropTypes.func.isRequired
     }
-    submit = (data) => this.props.login(data).then(() => this.props.history.push("/"))
+    submit = (data) => this.props.login(data).then(() => this.props.history.push("/dashboard"))
     render() {
         return (
             <div>

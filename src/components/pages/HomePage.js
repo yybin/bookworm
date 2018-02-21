@@ -15,7 +15,7 @@ class HomePage extends React.Component {
 				<h1>Home Page</h1>
 				{ this.props.isAuthenticated ? 
 					<button onClick={() => this.props.logout()}>Logout</button> 
-					:<Link to="/login">Login</Link>}
+					:(<div><Link to="/login">Login</Link> or <Link to="/signup">Sign up</Link></div>)}
 			</div>
         );
     }
