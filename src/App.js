@@ -12,19 +12,20 @@ import UserRoute from './components/routes/UserRoute'
 import GuestRoute from './components/routes/GuestRoute'
 
 const App = ({ location }) => (
-    <div className="ui container">
-		<Route  exact location={location} path="/"  component={HomePage}/>
-		<Route  exact location={location} path="/confirmation/:token"  component={ConfirmationPage}/>
-		<GuestRoute exact location={location} path="/login" component={LoginPage}/>
-		<GuestRoute exact location={location} path="/forgot_password"  component={ForgotPasswordPage}/>
-		<GuestRoute exact location={location} path="/reset_password/:token"  component={ResetPasswordPage}/>
-		<GuestRoute exact location={location} path="/signup" component={SignupPage}/>
-		<UserRoute  exact location={location} path="/dashboard"  component={DashboardPage}/>
+	<div className="ui container">
+		<Route exact location={location} path="/" component={HomePage} />
+		<Route exact location={location} path="/confirmation/:token" component={ConfirmationPage} />
+		<GuestRoute exact location={location} path="/login" component={LoginPage} />
+		<GuestRoute exact location={location} path="/forgot_password" component={ForgotPasswordPage} />
+		<GuestRoute exact location={location} path="/reset_password/:token" component={ResetPasswordPage} />
+		<GuestRoute exact location={location} path="/signup" component={SignupPage} />
+		<UserRoute exact location={location} path="/dashboard" component={DashboardPage} />
+
 	</div>
 )
 
 App.propTypes = {
-    location: PropTypes.shape({ pathname: PropTypes.string.isRequired }).isRequired
+	location: PropTypes.shape({ pathname: PropTypes.string.isRequired }).isRequired
 }
 
 export default App;
